@@ -5398,6 +5398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568621029}
   - component: {fileID: 1568621030}
+  - component: {fileID: 1568621031}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -5437,8 +5438,30 @@ MonoBehaviour:
   range: 22
   fireRate: 5000
   impactForce: 125
+  maxAmmo: 2
+  reloadTime: 1
   fpsCam: {fileID: 963194227}
   muzzleflash: {fileID: 1270320201}
+  animator: {fileID: 1568621031}
+--- !u!95 &1568621031
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568621028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8c8e12ff995e1742975cdc90f848224, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1787008355
 GameObject:
   m_ObjectHideFlags: 0
