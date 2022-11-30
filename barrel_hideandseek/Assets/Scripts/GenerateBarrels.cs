@@ -21,7 +21,7 @@ public class GenerateBarrels : MonoBehaviour
         {
             xPos = Random.Range(1, 50);
             zPos = Random.Range(1, 50);
-            Instantiate(theBarrel, new Vector3(xPos, 0, zPos), Quaternion.identity);
+            Instantiate(theBarrel, new Vector3(xPos, 1, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
             barrelCount += 1;
         }
