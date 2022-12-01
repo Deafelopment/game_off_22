@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3592defec09e4b144ae8aead11c032fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoading: 3
+  delayBeforeLoading: 30
   sceneNameToLoad: GameOver
 --- !u!4 &534592434
 Transform:
