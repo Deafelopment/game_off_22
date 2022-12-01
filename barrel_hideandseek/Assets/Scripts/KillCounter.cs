@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class KillCounter : MonoBehaviour
 {
     public Text counterText;
+    public Text highScoreText;
     int kills;
 
-    void Start()
+    private void Start()
     {
-        
+        UpdateHighScoreText();
     }
 
     void Update()
@@ -26,6 +27,21 @@ public class KillCounter : MonoBehaviour
     public void AddKill()
     {
         kills++;
+        CheckHighScore();
+    }
+
+    void CheckHighScore()
+    {
+        if(kills > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", kills);
+            UpdateHighScoreText();
+        }
+    }
+
+    void UpdateHighScoreText()
+    {
+        highScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
     }
 
 }
