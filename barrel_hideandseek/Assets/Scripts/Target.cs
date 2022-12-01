@@ -3,6 +3,7 @@
 public class Target : MonoBehaviour
 {
 
+    public GameObject destroyedVersion;
     public float health = 100f;
     KillCounter killCounterScript;
 
@@ -22,6 +23,7 @@ public class Target : MonoBehaviour
 
     void Die()
     {
+        Instantiate(destroyedVersion, transform.position, transform.rotation);
         Destroy(gameObject);
         killCounterScript.AddKill();
     }
