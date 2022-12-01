@@ -17,12 +17,12 @@ public class GenerateBarrels : MonoBehaviour
 
     IEnumerator BarrelDrop()
     {
-        while (barrelCount < 10)
+        while (barrelCount < 99)
         {
-            xPos = Random.Range(1, 50);
-            zPos = Random.Range(1, 50);
-            Instantiate(theBarrel, new Vector3(xPos, 1, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            xPos = Random.Range(1, 99);
+            zPos = Random.Range(1, 99);
+            Instantiate(theBarrel, new Vector3(xPos, 4, zPos), Quaternion.identity);
+            yield return new WaitForSeconds(0f);
             barrelCount += 1;
         }
     }
