@@ -4,6 +4,12 @@ public class Target : MonoBehaviour
 {
 
     public float health = 100f;
+    KillCounter killCounterScript;
+
+    private void Start()
+    {
+        killCounterScript = GameObject.Find("KCO").GetComponent<KillCounter>();
+    }
 
     public void TakeDamage (float amount)
     {
@@ -17,6 +23,7 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        killCounterScript.AddKill();
     }
 
 }
